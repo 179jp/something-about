@@ -1,0 +1,96 @@
+/*
+* 共通コンポーネント
+* ----------------------------------------
+*/
+.phageVerticalText {
+  font-size: 13px;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  text-combine-upright: digits 3;
+  -webkit-text-combine: digits 2;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 15em;
+
+  line-break: normal;
+  hanging-punctuation: allow-end;
+}
+.phageVerticalColumns {
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  text-combine-upright: digits 3;
+  -webkit-text-combine: digits 2;
+
+  width: 100%;
+  min-height: calc((15em + var(--rowGrid)) * 11);
+
+  column-count: auto;
+  column-width: 15em;
+  column-fill: auto;
+  column-gap: var(--rowGrid);
+  column-rule: thin solid rgb(var(--gray-light));
+
+  line-break: normal;
+  hanging-punctuation: allow-end;
+}
+
+/*
+* Grid
+* ----------------------------------------
+*/
+:root {
+  --phageLeftEdge: 2cqw;
+  --phageRightEdge: 2cqw;
+  --phageGridColumn: 10;
+  --phageRowGrid: 8px;
+  --phageGridGutter: 8cqw;
+  --phageRedGrid: calc(
+    (
+        100cqw - var(--phageLeftEdge) - var(--phageRightEdge) -
+          var(--phageGridGutter) * (var(--phageGridColumn) - 1)
+      ) / var(--phageGridColumn)
+  );
+}
+
+/*
+* Layout A
+* ----------------------------------------
+*/
+.phageA {
+  width: 100%;
+  container-type: inline-size;
+}
+.phageA_header {
+  margin: 0 0 calc(var(--phageRowGrid) * 2);
+  padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+}
+.phageA_title {
+  font-size: 5cqw;
+  text-align: right;
+}
+.phageA_description {
+  font-size: 3cqw;
+  text-align: right;
+  margin: 0 0 calc(var(--phageRowGrid) * 1);
+}
+.phageA_image {
+  margin: 0 0 calc(var(--phageRowGrid) * 1);
+  padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+}
+.phageA_image img {
+  line-height: 0;
+}
+.phageA_image figcaption {
+  font-size: 2cqw;
+  width: calc(var(--phageRedGrid) * 4 + var(--phageGridGutter) * 3);
+  margin: 0 0 calc(var(--phageRowGrid) * 1);
+}
+.phageA_body {
+  height: 18cqh;
+  padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+}
