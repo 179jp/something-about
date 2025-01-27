@@ -2,6 +2,12 @@
 * 共通コンポーネント
 * ----------------------------------------
 */
+.vText {
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  text-combine-upright: digits 3;
+  -webkit-text-combine: digits 2;
+}
 .phageVerticalText {
   font-size: 13px;
   line-height: 1.8;
@@ -57,6 +63,52 @@
   );
 }
 
+.phageVerticalColumn {
+  height: 18cqh;
+  padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+}
+.serif {
+  font-family: "fot-tsukumin-pr6n", sans-serif;
+  font-weight: 300;
+}
+
+/*
+* Cover
+* ----------------------------------------
+*/
+.phageCoverImgA {
+  width: 100%;
+  container-type: inline-size;
+  position: relative;
+  margin-bottom: calc(var(--phageRowGrid) * 2);
+}
+.phageCoverImgA_title {
+  font-size: 5cqw;
+  font-weight: normal;
+  position: absolute;
+  top: 5cqh;
+  left: 7cqw;
+  text-align: left;
+  color: #fff;
+}
+.phageCoverImgA_figure,
+.phageCoverImgA_img {
+  width: 100cqw;
+  margin: 0;
+  padding: 0;
+}
+.phageCoverImgA_caption {
+  font-size: 2cqw;
+  font-weight: 200;
+  position: absolute;
+  bottom: calc(var(--phageRowGrid) * 3);
+  right: calc(
+    var(--phageRedGrid) * 0 + var(--phageGridGutter) * 0 + var(--phageRightEdge)
+  );
+  width: calc(var(--phageRedGrid) * 4 + var(--phageGridGutter) * 3);
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /*
 * Layout A
 * ----------------------------------------
@@ -79,7 +131,7 @@
   margin: 0 0 calc(var(--phageRowGrid) * 1);
 }
 .phageA_image {
-  margin: 0 0 calc(var(--phageRowGrid) * 1);
+  margin: 0 0 calc(var(--phageRowGrid) * 1.5);
   padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
 }
 .phageA_image img {
@@ -88,7 +140,6 @@
 .phageA_image figcaption {
   font-size: 2cqw;
   width: calc(var(--phageRedGrid) * 4 + var(--phageGridGutter) * 3);
-  margin: 0 0 calc(var(--phageRowGrid) * 1);
 }
 .phageA_body {
   height: 18cqh;

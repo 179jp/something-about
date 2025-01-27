@@ -71,7 +71,7 @@ main {
   width: 100%;
   box-sizing: border-box;
   margin: auto;
-  padding: 0 var(--rightEdge) calc(var(--rowGrid) * 2) var(--leftEdge);
+  padding: 0;
 }
 h1,
 h2,
