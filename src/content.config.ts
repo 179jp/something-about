@@ -1,6 +1,17 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
+// Blog
+const blogCollection = defineCollection({
+  // Load Markdown and MDX files in the `src/content/blog/` directory.
+  loader: glob({ base: "./src/content/blog/2025/", pattern: "**/*.{md,mdx}" }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    date: z.coerce.date(),
+    heroImage: z.string().optional(),
+  }),
+});
+
 // NEWS
 const news2025 = defineCollection({
   // Load Markdown and MDX files in the `src/content/blog/` directory.
@@ -30,4 +41,6 @@ const interviews = defineCollection({
   }),
 });
 
-export const collections = { news2025, interviews };
+export const collections = {
+  blog: blogCollection,
+};
