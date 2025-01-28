@@ -50,8 +50,8 @@
 * ----------------------------------------
 */
 :root {
-  --phageLeftEdge: 2cqw;
-  --phageRightEdge: 2cqw;
+  --phageLeftEdge: 4cqw;
+  --phageRightEdge: 4cqw;
   --phageGridColumn: 10;
   --phageRowGrid: 8px;
   --phageGridGutter: 4cqw;
@@ -64,8 +64,11 @@
 }
 
 .phageVerticalColumn {
-  height: 18cqh;
+  box-sizing: border-box;
+  width: 100%;
+  height: 20cqh;
   padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+  overflow-x: auto;
 }
 .serif {
   font-family: "fot-tsukumin-pr6n", sans-serif;
