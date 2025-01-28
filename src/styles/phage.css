@@ -54,7 +54,7 @@
   --phageRightEdge: 2cqw;
   --phageGridColumn: 10;
   --phageRowGrid: 8px;
-  --phageGridGutter: 8cqw;
+  --phageGridGutter: 4cqw;
   --phageRedGrid: calc(
     (
         100cqw - var(--phageLeftEdge) - var(--phageRightEdge) -
@@ -144,4 +144,46 @@
 .phageA_body {
   height: 18cqh;
   padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+}
+
+/*
+* GridImages
+* ----------------------------------------
+*/
+.phageGridImages {
+  display: grid;
+  gap: var(--phageRowGrid);
+  padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+}
+.phageGridImages_figure {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns:
+    calc(var(--phageRedGrid) * 6 + var(--phageGridGutter) * 5)
+    calc(var(--phageRedGrid) * 4 + var(--phageGridGutter) * 3);
+  grid-template-areas: "img caption";
+  gap: var(--phageGridGutter);
+}
+.phageGridImages_img {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  line-height: 0;
+}
+.phageGridImages_caption {
+  grid-area: caption;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  font-size: 2cqw;
+  margin: 0;
+  padding: 0;
+}
+.phageGridImages_figure.num-2 {
+  grid-template-columns:
+    calc(var(--phageRedGrid) * 4 + var(--phageGridGutter) * 3)
+    calc(var(--phageRedGrid) * 6 + var(--phageGridGutter) * 5);
+  grid-template-areas: "caption img";
 }
