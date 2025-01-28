@@ -46,6 +46,27 @@
 }
 
 /*
+* Header
+* ----------------------------------------
+*/
+.phageHeaderSimpleText {
+  width: 100%;
+  text-align: center;
+  font-size: 3cqw;
+  padding: var(--phageRowGrid) 0;
+}
+.phageHeaderSimpleText_word {
+  margin: 0;
+  &::before,
+  &::after {
+    content: "––";
+    display: inline-block;
+    letter-spacing: -0.2em;
+    padding: 0 1em;
+  }
+}
+
+/*
 * Grid
 * ----------------------------------------
 */
