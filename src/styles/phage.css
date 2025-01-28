@@ -52,7 +52,8 @@
 .phageHeaderSimpleText {
   width: 100%;
   text-align: center;
-  font-size: 4cqw;
+  font-size: 2.5cqw;
+  font-weight: 400;
   padding: 0 0 var(--phageRowGrid);
 }
 .phageHeaderSimpleText_word {
@@ -62,7 +63,7 @@
     content: "––";
     display: inline-block;
     letter-spacing: -0.2em;
-    padding: 0 1em;
+    padding: 0 0.5em;
   }
 }
 
