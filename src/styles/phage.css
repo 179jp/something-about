@@ -52,8 +52,8 @@
 .phageHeaderSimpleText {
   width: 100%;
   text-align: center;
-  font-size: 3cqw;
-  padding: var(--phageRowGrid) 0;
+  font-size: 4cqw;
+  padding: 0 0 var(--phageRowGrid);
 }
 .phageHeaderSimpleText_word {
   margin: 0;
@@ -87,7 +87,7 @@
 .phageVerticalColumn {
   box-sizing: border-box;
   width: 100%;
-  height: 20cqh;
+  height: 24cqh;
   padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
   overflow-x: auto;
 }
