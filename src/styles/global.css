@@ -173,8 +173,15 @@ hr {
 footer {
   font-size: 11px;
   border-top: 1px solid rgb(var(--gray-light));
-  padding-bottom: 4px;
-  text-align: center;
+  padding: 8px 8px 4px;
+  text-align: left;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+footer .footer_message {
+  font-size: 13px;
 }
 
 /* ------------------------------------------------------ */

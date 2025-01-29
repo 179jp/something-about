@@ -87,10 +87,12 @@
 
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .phageArticleList li {
   font-size: 3cqw;
   font-feature-settings: "palt" 1, "vpal" 1;
+  padding: 0 0.5em;
 }
 .phageArticleList li .num {
   font-style: normal;
@@ -98,6 +100,7 @@
   -webkit-text-combine: all;
 }
 .phageArticleList li .weekday {
+  font-size: 2.5cqw;
   font-feature-settings: "palt" 1, "vpal" 1;
 }
 

@@ -12,6 +12,6 @@ const latestPost = posts[0];
 const { Content } = await render(latestPost);
 ---
 
-<BlogPost {...latestPost.data}>
+<BlogPost {...latestPost.data} slug={latestPost.id}>
 	<Content />
 </BlogPost>
