@@ -44,6 +44,12 @@
   line-break: normal;
   hanging-punctuation: allow-end;
 }
+.phageUnit {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--phageRightEdge) 0 var(--phageLeftEdge);
+  margin: 0 0 var(--rowGrid);
+}
 
 /*
 * Header
@@ -65,6 +71,34 @@
     letter-spacing: -0.2em;
     padding: 0 0.5em;
   }
+}
+
+/*
+* Footer
+* ----------------------------------------
+*/
+.phageArticleList {
+  width: 100%;
+
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  text-combine-upright: digits 3;
+  -webkit-text-combine: digits 2;
+
+  margin: 0;
+  padding: 0;
+}
+.phageArticleList li {
+  font-size: 3cqw;
+  font-feature-settings: "palt" 1, "vpal" 1;
+}
+.phageArticleList li .num {
+  font-style: normal;
+  text-combine-upright: all;
+  -webkit-text-combine: all;
+}
+.phageArticleList li .weekday {
+  font-feature-settings: "palt" 1, "vpal" 1;
 }
 
 /*
