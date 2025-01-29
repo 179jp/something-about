@@ -80,19 +80,28 @@
 .phageArticleList {
   width: 100%;
 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(10, var(--phageRedGrid));
+  gap: var(--phageGridGutter);
+}
+.phageArticleList li {
   writing-mode: vertical-rl;
   font-feature-settings: "vpal";
   text-combine-upright: digits 3;
   -webkit-text-combine: digits 2;
+  direction: ltr;
 
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.phageArticleList li {
   font-size: 3cqw;
+  text-align: center;
+  line-height: var(--phageRedGrid);
   font-feature-settings: "palt" 1, "vpal" 1;
-  padding: 0 0.5em;
+  padding: 0;
+  margin: 0;
 }
 .phageArticleList li .num {
   font-style: normal;
@@ -136,8 +145,7 @@
 
 /*
 * Cover
-* ----------------------------------------
-*/
+* ---------------------------------------- */
 .phageCoverImgA {
   width: 100%;
   container-type: inline-size;
@@ -249,4 +257,44 @@
     calc(var(--phageRedGrid) * 4 + var(--phageGridGutter) * 3)
     calc(var(--phageRedGrid) * 6 + var(--phageGridGutter) * 5);
   grid-template-areas: "caption img";
+}
+
+/*
+* Grid
+* ---------------------------------------- */
+.gridsWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.grids {
+  display: grid;
+  grid-template-columns: repeat(var(--phageGridColumn), var(--phageRedGrid));
+  gap: var(--phageGridGutter);
+  margin-left: var(--phageLeftEdge);
+  width: calc(100% - var(--phageLeftEdge) - var(--phageRightEdge));
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+.gridColumn {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.1);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.8s;
+  pointer-events: none;
+  position: relative;
+  z-index: -1;
+}
+.gridsWrap.showGrids .gridColumn {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: white;
+  transition: all 0.25s;
 }
