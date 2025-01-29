@@ -4,6 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --accent: #2337ff;
   --accent-dark: #000d8a;
@@ -173,7 +177,7 @@ hr {
 footer {
   font-size: 10px;
   border-top: 1px solid rgb(var(--gray-light));
-  padding: 8px 8px 16px;
+  padding: 8px 8px 12px;
   text-align: left;
 }
 footer p {
