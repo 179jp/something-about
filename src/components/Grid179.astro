@@ -1,0 +1,36 @@
+---
+import "../styles/grid179.css";
+
+const scaleNum = Math.floor(179 / 10);
+const gridColumnArray = [...Array(scaleNum)].map((_, i) => i);
+const gridRowArray = [...Array(scaleNum)].map((_, i) => i);
+---
+
+<main class="grid179">
+  <h1 class:list={["grid179_logo"]}>179</h1>
+  <p class="grid179_sub">web design &amp; engineering</p>
+</main>
+
+<div class="grid179 underground">
+  {
+    gridColumnArray.map((num) => (
+      <div class="grid179_scaleColumn">{num > 0 ? num * 10 : null}</div>
+    ))
+  }
+  <div class="grid179_scaleColumn grid179_scaleColumn-179">
+    <span>170</span>
+    <span>179</span>
+  </div>
+</div>
+
+<div class="grid179 underground">
+  {
+    gridRowArray.map((num) => (
+      <div class="grid179_scaleRow">{num > 0 ? num * 10 : null}</div>
+    ))
+  }
+  <div class="grid179_scaleRow grid179_scaleRow-179">
+    <span>170</span>
+    <span>179</span>
+  </div>
+</div>

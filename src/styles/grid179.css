@@ -1,0 +1,52 @@
+.grid179 {
+  width: 100%;
+  height: 100svh;
+  display: grid;
+  grid-template-columns: repeat(179, 1fr);
+  grid-template-rows: repeat(179, 1fr);
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  &.underground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+}
+
+.grid179_logo {
+  container-type: inline-size;
+  font-size: 25cqw;
+  letter-spacing: 0;
+  grid-row: span 79 / span 79;
+  grid-column: span 79 / span 79;
+}
+.grid179_sub {
+
+}
+
+.grid179_scaleColumn {
+  container-type: inline-size;
+  font-size: 0.5cqw;
+  grid-column: span 10 / span 10;
+  grid-row: span 179 / span 179;
+}
+.grid179_scaleColumn-179 {
+  grid-column: span 9 / span 9;
+  display: flex;
+  justify-content: space-between;
+}
+.grid179_scaleRow {
+  container-type: inline-size;
+  font-size: 0.5cqw;
+  grid-column: span 179 / span 179;
+  grid-row: span 10 / span 10;
+}
+.grid179_scaleRow-179 {
+  grid-row: span 9 / span 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
