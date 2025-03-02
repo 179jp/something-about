@@ -1,0 +1,21 @@
+---
+import "../../styles/gridStudy.css";
+
+const scaleNum = 28;
+const gridColumnArray = [...Array(scaleNum)].map((_, i) => i);
+const gridRowArray = [...Array(scaleNum)].map((_, i) => i);
+---
+
+<main class="gri_d">
+  <p class="gri_d_sub">grid study</p>
+  <h1 class:list={["gri_d_logo"]}>179</h1>
+  <p class="gri_d_sub">web design &amp; engineering</p>
+</main>
+
+<div class="gri_d underground">
+  {gridColumnArray.map((num) => <div class="gri_d_scaleColumn">{num + 1}</div>)}
+</div>
+
+<div class="gri_d underground">
+  {gridRowArray.map((num) => <div class="gri_d_scaleRow">{num + 1}</div>)}
+</div>
