@@ -1,14 +1,22 @@
-.gri_d {
+.-g {
   --grid-num: 28;
+  --grid-wide: 26;
+  --grid-full: 28;
+  --grid-gap: clamp(4px, 0.8vw, 16px);
+  --grid-column-w: calc(
+    (
+      100vw - (
+        var(--grid-gap) * (var(--grid-num) - 1)
+        )
+    ) / var(--grid-num));
+
   width: 100%;
-  height: 100svh;
-  display: grid;
-  grid-template-columns: repeat(var(--grid-num), 1fr);
-  grid-template-rows: repeat(var(--grid-num), 1fr);
-  gap: 1%;
+  min-height: 100svh;
+  
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   &.underground {
     position: absolute;
@@ -16,40 +24,165 @@
     left: 0;
     pointer-events: none;
   }
+
+  .-g_head {
+    height: calc(
+      var(--grid-column-w) * 0.5 +
+      var(--grid-gap) * (0)
+    );
+  }
+
+  .-g_u {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-num), 1fr);
+    gap: var(--grid-gap);
+    position: relative;
+  }
+  .-g_scale {
+    height: 200vh;
+  }
+
+  .-h_1 {
+    height: calc(
+      var(--grid-column-w) * 1 +
+      var(--grid-gap) * (1 - 1)
+    );
+  }
+  .-h_2 {
+    height: calc(
+      var(--grid-column-w) * 2 +
+      var(--grid-gap) * (2 - 1)
+    );
+  }
+  .-h_3 {
+    height: calc(
+      var(--grid-column-w) * 3 +
+      var(--grid-gap) * (3 - 1)
+    );
+  }
+  .-h_4 {
+    height: calc(
+      var(--grid-column-w) * 4 +
+      var(--grid-gap) * (4 - 1)
+    );
+  }
+  .-h_5 {
+    height: calc(
+      var(--grid-column-w) * 5 +
+      var(--grid-gap) * (5 - 1)
+    );
+  }
+  .-h_6 {
+    height: calc(
+      var(--grid-column-w) * 6 +
+      var(--grid-gap) * (6 - 1)
+    );
+  }
+  .-h_7 {
+    height: calc(
+      var(--grid-column-w) * 7 +
+      var(--grid-gap) * (7 - 1)
+    );
+  }
+  .-h_8 {
+    height: calc(
+      var(--grid-column-w) * 8 +
+      var(--grid-gap) * (8 - 1)
+    );
+  }
+  .-h_9 {
+    height: calc(
+      var(--grid-column-w) * 9 +
+      var(--grid-gap) * (9 - 1)
+    );
+  }
+  .-h_10 {
+    height: calc(
+      var(--grid-column-w) * 10 +
+      var(--grid-gap) * (10 - 1)
+    );
+  }
+  .-h_11 {
+    height: calc(
+      var(--grid-column-w) * 11 +
+      var(--grid-gap) * (11 - 1)
+    );
+  }
+  .-h_12 {
+    height: calc(
+      var(--grid-column-w) * 12 +
+      var(--grid-gap) * (12 - 1)
+    );
+  }
+  .-h_13 {
+    height: calc(
+      var(--grid-column-w) * 13 +
+      var(--grid-gap) * (13 - 1)
+    );
+  }
+  .-h_14 {
+    height: calc(
+      var(--grid-column-w) * 14 +
+      var(--grid-gap) * (14 - 1)
+    );
+  }
+  .-h_15 {
+    height: calc(
+      var(--grid-column-w) * 15 +
+      var(--grid-gap) * (15 - 1)
+    );
+  }
+  
 }
 
-.gri_d_logo {
+.-g_logo {
   container-type: inline-size;
   font-size: 25cqw;
   letter-spacing: 0;
   grid-row: span 10 / span 10;
   grid-column: span 10 / span 10;
 }
-.gri_d_sub {
+.-g_sub {
 
 }
 
-.gri_d_scaleColumn {
+.-g_scaleColumn {
+  height: 100%;
   container-type: inline-size;
   font-size: 0.5cqw;
   grid-column: span 1 / span 1;
   grid-row: span var(--grid-num) / span var(--grid-num);
   box-sizing: border-box;
-  border-left: 1px solid rgba(0,0,0,.1);
-  border-right: 1px solid rgba(0,0,0,.1);
+  background-color: rgba(109, 253, 253, .2);
   &::first-child {
     border-left: none;
   }
 }
-.gri_d_scaleRow {
+.-gRow {
+  grid-auto-rows: calc(var(--grid-column-w) + 20px);
+}
+.-g_scaleRow {
+  height: 100%;
   container-type: inline-size;
   font-size: 0.5cqw;
   grid-column: span var(--grid-num) / span var(--grid-num);
   grid-row: span 1 / span 1;
   box-sizing: border-box;
-  border-top: 1px solid rgba(0,0,0,.1);
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  background-color: rgba(109, 253, 253, .2);
   &::first-child {
     border-top: none;
   }
+}
+
+
+.-g_col-wide {
+  grid-column: span var(--grid-wide) / span var(--grid-wide);
+  grid-column-start: 2;
+}
+.-g_col-middle {
+  grid-column: span calc(var(--grid-wide) / 2 + var(--grid-wide) / 4) / span calc(var(--grid-wide) / 2 + var(--grid-wide) / 4);
+}
+.-g_col-half {
+  grid-column: span calc(var(--grid-wide) / 2) / span calc(var(--grid-wide) / 2);
 }

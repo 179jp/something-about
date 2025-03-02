@@ -1,0 +1,132 @@
+.-g {
+  --grid-num: 28;
+  --grid-wide: 26;
+  --grid-full: 28;
+  --grid-gap: clamp(4px, 0.8vw, 16px);
+  --grid-column-w: calc(
+    (
+      100vw - (
+        var(--grid-gap) * (var(--grid-num) - 1)
+        )
+    ) / var(--grid-num));
+  width: 100%;
+  min-height: 100svh;
+
+  // Reset
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  &.underground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .-g_head {
+    height: calc(
+      var(--grid-column-w) * 0.5 +
+      var(--grid-gap) * (0)
+    );
+  }
+
+  .-g_u {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-num), 1fr);
+    gap: var(--grid-gap);
+    position: relative;
+  }
+  .-g_scale {
+    height: 1000vh;
+  }
+
+  .-f {
+    display: flex;
+    gap: var(--grid-gap);
+  }
+
+  .-vt {
+    writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  }
+}
+
+.-g_scaleColumn {
+  height: 100%;
+  container-type: inline-size;
+  font-size: 0.5cqw;
+  grid-column: span 1 / span 1;
+  grid-row: span var(--grid-num) / span var(--grid-num);
+  box-sizing: border-box;
+  background-color: rgba(109, 253, 253, .2);
+  &::first-child {
+    border-left: none;
+  }
+}
+.-gRow {
+  grid-auto-rows: calc(var(--grid-column-w) + 20px);
+}
+.-g_scaleRow {
+  height: 100%;
+  container-type: inline-size;
+  font-size: 0.5cqw;
+  grid-column: span var(--grid-num) / span var(--grid-num);
+  grid-row: span 1 / span 1;
+  box-sizing: border-box;
+  background-color: rgba(109, 253, 253, .2);
+  &::first-child {
+    border-top: none;
+  }
+}
+
+
+.-g_col-wide {
+  grid-column: span var(--grid-wide) / span var(--grid-wide);
+  grid-column-start: 2;
+}
+.-g_col-middle {
+  grid-column: span calc(var(--grid-wide) / 2 + var(--grid-wide) / 4) / span calc(var(--grid-wide) / 2 + var(--grid-wide) / 4);
+}
+.-g_col-half {
+  grid-column: span calc(var(--grid-wide) / 2) / span calc(var(--grid-wide) / 2);
+}
+
+// Column
+@for $i from 1 through 28 {
+  .-c_#{$i} {
+    grid-column: 
+      span #{$i} / span #{$i};
+  }
+  @for $j from 1 through (28 - $i + 1) {
+    .-c_#{$i}-#{$j} {
+      grid-column: 
+        span #{$i} / span #{$i};
+      grid-column-start: #{$j};
+    }
+  }
+}
+
+// Width
+@for $i from 1 through 28 {
+  .-w_#{$i} {
+    width: calc(var(--grid-column-w) * #{$i} + var(--grid-gap) * (#{$i} - 1));
+  }
+}
+
+// Height
+@for $i from 1 through 20 {
+  .-h_#{$i} {
+    height: calc(var(--grid-column-w) * #{$i} + var(--grid-gap) * (#{$i} - 1));
+  }
+}
+
+// Margin
+@for $i from 1 through 10 {
+  .-_mt_#{$i} {
+    margin-top: calc(var(--grid-column-w) * #{$i} + var(--grid-gap) * (#{$i}));
+  }
+}
