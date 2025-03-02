@@ -32,6 +32,10 @@
   font-size: 0.5cqw;
   grid-column: span 10 / span 10;
   grid-row: span 179 / span 179;
+  border-left: 1px solid rgba(0,0,0,.1);
+  &::first-child {
+    border-left: none;
+  }
 }
 .grid179_scaleColumn-179 {
   grid-column: span 9 / span 9;
@@ -43,6 +47,10 @@
   font-size: 0.5cqw;
   grid-column: span 179 / span 179;
   grid-row: span 10 / span 10;
+  border-top: 1px solid rgba(0,0,0,.1);
+  &::first-child {
+    border-top: none;
+  }
 }
 .grid179_scaleRow-179 {
   grid-row: span 9 / span 9;
