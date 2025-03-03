@@ -59,7 +59,9 @@
   .-g .-c-vt_scr {
     padding-right: calc(var(--grid-column-w) * 1 + var(--grid-gap) * 1);
     grid-column: span var(--grid-num)/span var(--grid-num);
+    padding-bottom: calc(var(--grid-column-w) * 0.5 + var(--grid-gap) * 0);
     overflow-x: auto;
+    overflow-y: hidden;
   }
 }
 .-g .-c-vt_scr * + * {
