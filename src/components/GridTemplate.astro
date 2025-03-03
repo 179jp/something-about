@@ -3,7 +3,7 @@ import "../styles/grid/index.css";
 
 const scaleNum = 28;
 const gridColumnArray = [...Array(scaleNum)].map((_, i) => i);
-const gridRowArray = [...Array(scaleNum)].map((_, i) => i);
+const gridColumnMobileArray = [...Array(scaleNum / 2)].map((_, i) => i);
 ---
 
 <main class="-g">
@@ -168,8 +168,18 @@ const gridRowArray = [...Array(scaleNum)].map((_, i) => i);
   </div>
 </main>
 
-<div class="-g underground">
+<div class="-g underground forPc">
   <div class:list={["-g_u", "-g_scale"]}>
     {gridColumnArray.map((num) => <div class="-g_scaleColumn">{num + 1}</div>)}
+  </div>
+</div>
+
+<div class="-g underground forMobile">
+  <div class:list={["-g_u", "-g_scale"]}>
+    {
+      gridColumnMobileArray.map((num) => (
+        <div class="-g_scaleColumn">{num + 1}</div>
+      ))
+    }
   </div>
 </div>

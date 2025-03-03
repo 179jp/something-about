@@ -13,18 +13,34 @@
   container-type: inline-size;
   font-size: 1.2cqw;
   text-align: justify;
-  &_xs {
+  @media (width < $MOBILE_WIDTH) {
+    font-size: 1.6cqw;
+  }
+  &_xs,
+  &_s,
+  &_m,
+  &_l,
+  &_xl {
     container-type: inline-size;
+  }
+  &_xs {
     font-size: 0.6cqw;
+    @media (width < $MOBILE_WIDTH) {
+      font-size: 0.8cqw;
+    }
   }
   &_s {
-    container-type: inline-size;
     font-size: 0.8cqw;
+    @media (width < $MOBILE_WIDTH) {
+      font-size: 1.2cqw;
+    }
   }
   &_m {
-    container-type: inline-size;
     font-size: 1.6cqw;
     text-align: justify;
+    @media (width < $MOBILE_WIDTH) {
+      font-size: 1.8cqw;
+    }
   }
   &_l {
     font-size: 1.5em;

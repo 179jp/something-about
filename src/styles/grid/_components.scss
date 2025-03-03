@@ -2,6 +2,7 @@
   
   width: 100%;
   min-height: 100svh;
+  overflow-x: hidden;
 
   &.underground {
     position: absolute;
@@ -31,5 +32,18 @@
   .-f {
     display: flex;
     gap: var(--grid-gap);
+  }
+
+  .forPc {
+    display: block;
+    @media (width < $MOBILE_WIDTH) {
+      display: none;
+    }
+  }
+  .forMobile {
+    display: none;
+    @media (width < $MOBILE_WIDTH) {
+      display: block;
+    }
   }
 }

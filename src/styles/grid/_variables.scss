@@ -1,7 +1,12 @@
 $GRID_NUMBER: 28;
+$MOBILE_WIDTH: 768px;
 
 :root {
   --grid-num: 28;
+  @media (width < $MOBILE_WIDTH) {
+    --grid-num: 14;
+  }
+  
   --grid-wide: calc(var(--grid-num) - 2);
   --grid-full: var(--grid-num);
   --grid-gap: clamp(4px, 0.8vw, 16px);
@@ -11,6 +16,7 @@ $GRID_NUMBER: 28;
         var(--grid-gap) * (var(--grid-num) - 1)
         )
     ) / var(--grid-num));
+  
 
   // Reset
   * {
