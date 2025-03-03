@@ -41,6 +41,18 @@
     gap: var(--grid-gap);
   }
 
+  .-c-vt_scr {
+    @media (width < $MOBILE_WIDTH) {
+      padding-right: calc(
+        var(--grid-column-w) * 1 +
+        var(--grid-gap) * (1)
+      );
+    }
+    * + * {
+      margin-right: 1rem;
+    }
+  }
+
   .forPc {
     display: block;
     @media (width < $MOBILE_WIDTH) {
