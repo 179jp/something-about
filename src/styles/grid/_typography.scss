@@ -14,7 +14,7 @@
   font-size: 1.2cqw;
   text-align: justify;
   @media (width < $MOBILE_WIDTH) {
-    font-size: 2cqw;
+    font-size: 2.6cqw;
   }
   &_xs,
   &_s,
@@ -26,20 +26,20 @@
   &_xs {
     font-size: 0.6cqw;
     @media (width < $MOBILE_WIDTH) {
-      font-size: 1.4cqw;
+      font-size: 1.8cqw;
     }
   }
   &_s {
     font-size: 0.8cqw;
     @media (width < $MOBILE_WIDTH) {
-      font-size: 1.8cqw;
+      font-size: 2cqw;
     }
   }
   &_m {
     font-size: 1.6cqw;
     text-align: justify;
     @media (width < $MOBILE_WIDTH) {
-      font-size: 2.4cqw;
+      font-size: 3cqw;
     }
   }
   &_l {

@@ -4995,7 +4995,7 @@
 }
 @media (width < 768px) {
   .-fs {
-    font-size: 2cqw;
+    font-size: 2.6cqw;
   }
 }
 .-fs_xs, .-fs_s, .-fs_m, .-fs_l, .-fs_xl {
@@ -5006,7 +5006,7 @@
 }
 @media (width < 768px) {
   .-fs_xs {
-    font-size: 1.4cqw;
+    font-size: 1.8cqw;
   }
 }
 .-fs_s {
@@ -5014,7 +5014,7 @@
 }
 @media (width < 768px) {
   .-fs_s {
-    font-size: 1.8cqw;
+    font-size: 2cqw;
   }
 }
 .-fs_m {
@@ -5023,7 +5023,7 @@
 }
 @media (width < 768px) {
   .-fs_m {
-    font-size: 2.4cqw;
+    font-size: 3cqw;
   }
 }
 .-fs_l {
