@@ -36,17 +36,22 @@
   &_l,
   &_xl {
     container-type: inline-size;
+    text-align: justify;
+    P {
+      hanging-punctuation: allow-end;
+      text-align: justify;
+    }
   }
   &_xs {
     font-size: 0.6cqw;
-    line-height: 1.4;
+    line-height: 1.45;
     @media (width < $MOBILE_WIDTH) {
       font-size: 1.8cqw;
     }
   }
   &_s {
     font-size: 0.8cqw;
-    line-height: 1.4;
+    line-height: 1.5;
     @media (width < $MOBILE_WIDTH) {
       font-size: 2cqw;
     }
@@ -54,7 +59,6 @@
   &_m {
     font-size: 1.6cqw;
     line-height: 1.8;
-    text-align: justify;
     @media (width < $MOBILE_WIDTH) {
       font-size: 3cqw;
     }
@@ -66,6 +70,7 @@
     font-size: 1.875em;
   }
   p {
+    hanging-punctuation: allow-end;
     text-align: justify;
   }
 }

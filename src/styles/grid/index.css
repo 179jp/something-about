@@ -5024,10 +5024,15 @@
 }
 .-fcs_xs, .-fcs_s, .-fcs_m, .-fcs_l, .-fcs_xl {
   container-type: inline-size;
+  text-align: justify;
+}
+.-fcs_xs P, .-fcs_s P, .-fcs_m P, .-fcs_l P, .-fcs_xl P {
+  hanging-punctuation: allow-end;
+  text-align: justify;
 }
 .-fcs_xs {
   font-size: 0.6cqw;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 @media (width < 768px) {
   .-fcs_xs {
@@ -5036,7 +5041,7 @@
 }
 .-fcs_s {
   font-size: 0.8cqw;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 @media (width < 768px) {
   .-fcs_s {
@@ -5046,7 +5051,6 @@
 .-fcs_m {
   font-size: 1.6cqw;
   line-height: 1.8;
-  text-align: justify;
 }
 @media (width < 768px) {
   .-fcs_m {
@@ -5060,6 +5064,7 @@
   font-size: 1.875em;
 }
 .-fcs p {
+  hanging-punctuation: allow-end;
   text-align: justify;
 }
 
