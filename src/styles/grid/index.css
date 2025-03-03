@@ -4985,54 +4985,76 @@
   --grid-base-w:
     16 * var(--grid-column-w) +
     15 * var(--grid-gap);
-  font-size: clamp(100%, var(--grid-base-w) / 45, 32px);
 }
 
 .-fs {
+  font-size: 0.875rem;
+}
+.-fs_xs {
+  font-size: 0.5625rem;
+}
+.-fs_s {
+  font-size: 0.75rem;
+}
+.-fs_m {
+  font-size: 1rem;
+}
+.-fs_l {
+  font-size: 1.5rem;
+}
+.-fs_xl {
+  font-size: 1.875rem;
+}
+
+.-fcs {
   container-type: inline-size;
   font-size: 1.2cqw;
+  line-height: 1.6;
   text-align: justify;
 }
 @media (width < 768px) {
-  .-fs {
+  .-fcs {
     font-size: 2.6cqw;
   }
 }
-.-fs_xs, .-fs_s, .-fs_m, .-fs_l, .-fs_xl {
+.-fcs_xs, .-fcs_s, .-fcs_m, .-fcs_l, .-fcs_xl {
   container-type: inline-size;
 }
-.-fs_xs {
+.-fcs_xs {
   font-size: 0.6cqw;
+  line-height: 1.4;
 }
 @media (width < 768px) {
-  .-fs_xs {
+  .-fcs_xs {
     font-size: 1.8cqw;
   }
 }
-.-fs_s {
+.-fcs_s {
   font-size: 0.8cqw;
+  line-height: 1.4;
 }
 @media (width < 768px) {
-  .-fs_s {
+  .-fcs_s {
     font-size: 2cqw;
   }
 }
-.-fs_m {
+.-fcs_m {
   font-size: 1.6cqw;
+  line-height: 1.8;
   text-align: justify;
 }
 @media (width < 768px) {
-  .-fs_m {
+  .-fcs_m {
     font-size: 3cqw;
   }
 }
-.-fs_l {
+.-fcs_l {
   font-size: 1.5em;
 }
-.-fs_xl {
+.-fcs_xl {
   font-size: 1.875em;
 }
-.-fs p {
+.-fcs p {
   text-align: justify;
 }
 
