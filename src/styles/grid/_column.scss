@@ -22,8 +22,10 @@
             span #{$m_i} / span #{$m_i};
         @if $i + $j > 14 {
           $m_j: 2;
-          @if $j > 14 {
-            $m_j: $j - 14;
+          @if $j > 2 and $j < 10 {
+            $m_j: $j - 1;
+          } @else if $j > 14 {
+            $m_j: $j - 14 + 1;
           }
           grid-column-start: #{$m_j};
         } @else {

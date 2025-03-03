@@ -25,6 +25,12 @@
     grid-template-columns: repeat(var(--grid-num), 1fr);
     gap: var(--grid-gap);
     position: relative;
+    @media (width < $MOBILE_WIDTH) {
+      gap: calc(
+        var(--grid-column-w) * 1 +
+        var(--grid-gap) * (1)
+      ) var(--grid-gap);
+    }
   }
   .-g_scale {
     height: 1000vh;
