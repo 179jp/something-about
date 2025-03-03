@@ -30,6 +30,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  mix-blend-mode: darken;
   pointer-events: none;
 }
 .-g .-g_head {
@@ -5047,7 +5048,7 @@
   grid-column: span var(--grid-num)/span var(--grid-num);
   grid-row: span 1/span 1;
   box-sizing: border-box;
-  background-color: rgba(109, 253, 253, 0.2);
+  background-color: rgba(109, 253, 253, 0.1);
 }
 .-g_scaleRow::first-child {
   border-top: none;
@@ -5060,7 +5061,7 @@
   grid-column: span 1/span 1;
   grid-row: span var(--grid-num)/span var(--grid-num);
   box-sizing: border-box;
-  background-color: rgba(109, 253, 253, 0.2);
+  background-color: rgba(109, 253, 253, 0.1);
 }
 .-g_scaleColumn::first-child {
   border-left: none;

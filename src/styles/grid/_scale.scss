@@ -6,7 +6,7 @@
   grid-column: span var(--grid-num) / span var(--grid-num);
   grid-row: span 1 / span 1;
   box-sizing: border-box;
-  background-color: rgba(109, 253, 253, .2);
+  background-color: rgba(109, 253, 253, .1);
   &::first-child {
     border-top: none;
   }
@@ -19,7 +19,7 @@
   grid-column: span 1 / span 1;
   grid-row: span var(--grid-num) / span var(--grid-num);
   box-sizing: border-box;
-  background-color: rgba(109, 253, 253, .2);
+  background-color: rgba(109, 253, 253, .1);
   &::first-child {
     border-left: none;
   }
