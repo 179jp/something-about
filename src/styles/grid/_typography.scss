@@ -44,14 +44,14 @@
   }
   &_xs {
     font-size: 0.6cqw;
-    line-height: 1.45;
+    line-height: 1.6;
     @media (width < $MOBILE_WIDTH) {
       font-size: 1.8cqw;
     }
   }
   &_s {
     font-size: 0.8cqw;
-    line-height: 1.5;
+    line-height: 1.7;
     @media (width < $MOBILE_WIDTH) {
       font-size: 2cqw;
     }

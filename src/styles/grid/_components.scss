@@ -47,9 +47,18 @@
         var(--grid-column-w) * 1 +
         var(--grid-gap) * (1)
       );
+      grid-column: 
+        span var(--grid-num) / span var(--grid-num);
+      overflow-x: auto;
     }
     * + * {
       margin-right: 1rem;
+    }
+    .-c-vt_inner {
+      padding-left: calc(
+        var(--grid-column-w) * 1 +
+        var(--grid-gap) * (1)
+      );
     }
   }
 
