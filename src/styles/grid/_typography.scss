@@ -1,0 +1,46 @@
+// フォントサイズ
+:root {
+  --grid-base-w: 
+    16 * var(--grid-column-w) + 
+    15 * var(--grid-gap);
+  font-size: clamp(
+      100%,
+      calc(var(--grid-base-w) / 45),
+      32px
+    );
+}
+.-fs {
+  container-type: inline-size;
+  font-size: 1.2cqw;
+  text-align: justify;
+  &_xs {
+    container-type: inline-size;
+    font-size: 0.6cqw;
+  }
+  &_s {
+    container-type: inline-size;
+    font-size: 0.8cqw;
+  }
+  &_m {
+    container-type: inline-size;
+    font-size: 1.6cqw;
+    text-align: justify;
+  }
+  &_l {
+    font-size: 1.5em;
+  }
+  &_xl {
+    font-size: 1.875em;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+// 縦書き
+.-vt {
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+}
+
+// 日本語の文字は独特の美しさを持っています。漢字の複雑な構造、ひ

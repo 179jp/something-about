@@ -1,0 +1,35 @@
+.-g {
+  
+  width: 100%;
+  min-height: 100svh;
+
+  &.underground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .-g_head {
+    height: calc(
+      var(--grid-column-w) * 0.5 +
+      var(--grid-gap) * (0)
+    );
+  }
+
+  .-g_u {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-num), 1fr);
+    gap: var(--grid-gap);
+    position: relative;
+  }
+  .-g_scale {
+    height: 1000vh;
+  }
+
+  .-f {
+    display: flex;
+    gap: var(--grid-gap);
+  }
+}

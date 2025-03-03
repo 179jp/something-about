@@ -1,0 +1,39 @@
+// Column
+@for $i from 1 through $GRID_NUMBER {
+  .-c_#{$i} {
+    grid-column: 
+      span #{$i} / span #{$i};
+  }
+  @for $j from 1 through ($GRID_NUMBER - $i + 1) {
+    .-c_#{$i}-#{$j} {
+      grid-column: 
+        span #{$i} / span #{$i};
+      grid-column-start: #{$j};
+    }
+  }
+}
+.-c_full {
+  grid-column: 
+    span var(--grid-num) / span var(--grid-num);
+}
+
+// Width
+@for $i from 1 through $GRID_NUMBER {
+  .-w_#{$i} {
+    width: calc(var(--grid-column-w) * #{$i} + var(--grid-gap) * (#{$i} - 1));
+  }
+}
+
+// Height
+@for $i from 1 through 20 {
+  .-h_#{$i} {
+    height: calc(var(--grid-column-w) * #{$i} + var(--grid-gap) * (#{$i} - 1));
+  }
+}
+
+// Margin
+@for $i from 1 through 10 {
+  .-_mt_#{$i} {
+    margin-top: calc(var(--grid-column-w) * #{$i} + var(--grid-gap) * (#{$i}));
+  }
+}
