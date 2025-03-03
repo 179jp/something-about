@@ -80,5 +80,10 @@
   writing-mode: vertical-rl;
   font-feature-settings: "vpal";
 }
+.-g_uprightText {
+  font-style: normal;
+  text-combine-upright: all;
+  -webkit-text-combine: all;
+}
 
 // 日本語の文字は独特の美しさを持っています。漢字の複雑な構造、ひ
