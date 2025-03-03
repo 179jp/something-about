@@ -5148,6 +5148,12 @@
   font-feature-settings: "vpal";
 }
 
+.-g_uprightText {
+  font-style: normal;
+  text-combine-upright: all;
+  -webkit-text-combine: all;
+}
+
 .-g_scaleRow {
   height: 100%;
   container-type: inline-size;
